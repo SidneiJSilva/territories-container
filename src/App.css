@@ -1,0 +1,29 @@
+#root {
+	max-width: 1280px;
+	margin: 0;
+	padding: null;
+	text-align: center;
+}
+
+.main-layout {
+	max-width: 1280px;
+	margin: 0;
+	padding: null;
+	text-align: center;
+}
+
+.login-layout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: null;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.app-container {
+	padding: null;
+	margin: 0;
+	height: 90vh;
+}
