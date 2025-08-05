@@ -11,13 +11,13 @@ export default defineConfig({
 			remotes: {
 				loginApp: {
 					name: "loginApp",
-					entry: "http://localhost:4173/remoteEntry.js",
+					entry: "https://login-plum-chi.vercel.app/remoteEntry.js",
 					type: "esm",
 				},
 
 				territoriesApp: {
 					name: "territoriesApp",
-					entry: "http://localhost:4174/remoteEntry.js",
+					entry: "https://react-territories.vercel.app/remoteEntry.js",
 					type: "esm",
 				},
 			},
