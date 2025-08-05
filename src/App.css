@@ -5,11 +5,13 @@
 	text-align: center;
 }
 
-.main-layout {
+.territories-layout {
+	width: 100%;
 	max-width: 1280px;
-	margin: 0;
-	padding: null;
-	text-align: center;
+	min-width: 0;
+	flex-grow: 1;
+	text-align: left;
+	box-sizing: border-box;
 }
 
 .login-layout {
@@ -23,7 +25,20 @@
 }
 
 .app-container {
-	padding: null;
+	padding: 0;
 	margin: 0;
 	height: 90vh;
+	display: flex;
+	justify-content: center;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }

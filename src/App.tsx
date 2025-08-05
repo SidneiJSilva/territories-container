@@ -1,12 +1,13 @@
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TerritoriesWrapper from "./pages/TerritoriesWrapper";
 import LoginWrapper from "./pages/LoginWrapper";
+import LoginRedirect from "./pages/LoginRedirect";
+import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css"; // Importe o CSS
 
 const MainLayout = () => (
-	<div className="main-layout">
-		{/* Aqui você renderizaria o seu territoriesApp no futuro */}
-		<h1>Bem-vindo à Aplicação Principal</h1>
-		<p>O conteúdo de territórios aparecerá aqui.</p>
+	<div className="territories-layout">
+		<TerritoriesWrapper />
 	</div>
 );
 
@@ -22,8 +23,15 @@ const App = () => {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/login/*" element={<LoginLayout />} />
-					<Route path="/territories" element={<MainLayout />} />
-					<Route path="*" element={<Navigate to="/login" />} />
+					<Route
+						path="/territories/*"
+						element={
+							<ProtectedRoute>
+								<MainLayout />
+							</ProtectedRoute>
+						}
+					/>
+					<Route path="*" element={<LoginRedirect />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

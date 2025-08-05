@@ -9,15 +9,17 @@ export default defineConfig({
 		federation({
 			name: "container",
 			remotes: {
-				// CORREÇÃO: Usar 'esm@' e o caminho raiz (sem /assets/)
 				loginApp: {
 					name: "loginApp",
 					entry: "http://localhost:4173/remoteEntry.js",
 					type: "esm",
 				},
 
-				// Lembre-se de fazer o mesmo para a sua outra app
-				// territoriesApp: "esm@http://localhost:4174/remoteEntry.js",
+				territoriesApp: {
+					name: "territoriesApp",
+					entry: "http://localhost:4174/remoteEntry.js",
+					type: "esm",
+				},
 			},
 			shared: ["react", "react-dom", "react-router-dom"],
 		}),
