@@ -19,7 +19,7 @@ export default defineConfig({
 					type: "esm",
 				},
 			},
-			shared: ["react", "react-dom", "react-router-dom"],
+			shared: ["react", "react-dom", "react-router-dom", "react-leaflet"],
 		}),
 	],
 	server: {
