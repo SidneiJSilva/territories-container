@@ -3,7 +3,7 @@ import TerritoriesWrapper from "./pages/TerritoriesWrapper";
 import LoginWrapper from "./pages/LoginWrapper";
 import LoginRedirect from "./pages/LoginRedirect";
 import ProtectedRoute from "./components/ProtectedRoute";
-import "./App.css"; // Importe o CSS
+import "./App.css";
 
 const MainLayout = () => (
 	<div className="territories-layout">
