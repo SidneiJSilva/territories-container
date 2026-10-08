@@ -7,14 +7,14 @@ const LoginWrapper = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const handleMessage = (event: MessageEvent) => {
+		const handleMessage = async (event: MessageEvent) => {
 			if (event.origin !== "https://territories-container.vercel.app") {
 				return;
 			}
 
 			if (event.data && event.data.type === "LOGIN_SUCCESS") {
 				console.log(
-					"[Container] Mensagem de sucesso recebida do loginApp. Navegando..."
+					"[Container] Mensagem de sucesso recebida do loginApp. Navegando...",
 				);
 				navigate("/territories");
 			}

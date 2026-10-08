@@ -15,7 +15,6 @@ export default defineConfig({
 					entry: "https://login-plum-chi.vercel.app/remoteEntry.js",
 					type: "esm",
 				},
-
 				territoriesApp: {
 					name: "territoriesApp",
 					entry: "https://react-territories.vercel.app/remoteEntry.js",
